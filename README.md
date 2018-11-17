@@ -1,5 +1,8 @@
 # cosmos-sign
 
+[![latest npm badge](https://img.shields.io/npm/v/cosmos-sign/latest.svg)](https://www.npmjs.com/package/@azure/cosmos)
+[![CircleCI](https://circleci.com/gh/southpolesteve/cosmos-sign.svg?style=svg)](https://circleci.com/gh/southpolesteve/cosmos-sign)
+
 `npm install cosmos-sign`
 
 ## Generate a signed header value using your master key
