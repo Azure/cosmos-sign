@@ -7,7 +7,7 @@
   "types": "./lib/node.d.ts",
   "scripts": {
     "compile": "rimraf lib && tsc",
-    "build": "npm run check-format && npm run compile && npm run test && bundlesize",
+    "build": "npm run check-format && npm run compile && npm run test && webpack && bundlesize",
     "test": "node lib/browser.test.js && node lib/node.test.js",
     "format": "prettier --write \"src/**/*.ts\"",
     "check-format": "prettier --list-different \"src/**/*.ts\"",
