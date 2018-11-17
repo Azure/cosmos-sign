@@ -2,6 +2,7 @@
 
 [![latest npm badge](https://img.shields.io/npm/v/cosmos-sign/latest.svg)](https://www.npmjs.com/package/@azure/cosmos)
 [![CircleCI](https://circleci.com/gh/southpolesteve/cosmos-sign.svg?style=svg)](https://circleci.com/gh/southpolesteve/cosmos-sign)
+![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/cosmos-sign.svg)
 
 `npm install cosmos-sign`
 
