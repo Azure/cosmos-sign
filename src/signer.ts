@@ -39,7 +39,7 @@ export function Signer(hmac: (key: string, message: string) => string) {
       "" +
       "\n"
 
-    var signature = hmac(masterKey, text)
+    const signature = hmac(masterKey, text)
 
     return encodeURIComponent(
       "type=" + type + "&ver=" + version + "&sig=" + signature
@@ -53,13 +53,7 @@ export function Signer(hmac: (key: string, message: string) => string) {
     resourceId: string = "",
     date: Date = new Date()
   ) {
-    const sig = signature.call(
-      masterKey,
-      method,
-      resourceType,
-      resourceId,
-      date
-    )
+    const sig = signature(masterKey, method, resourceType, resourceId, date)
 
     return {
       Authorization: sig,

@@ -1,3 +1,4 @@
+import assert from "assert"
 import { generateSignature, generateheaders } from "./browser"
 
 const date = new Date("Sat, 17 Nov 2018 01:06:05 GMT")
@@ -32,19 +33,5 @@ const headers = generateheaders(
   date
 )
 
-if (expectedSignature !== signature) {
-  console.log("FAILURE!")
-  console.log("Expected:", expectedSignature)
-  console.log("Result:", signature)
-  process.exit(1)
-}
-
-if (expectedHeaders !== headers) {
-  console.log("FAILURE!")
-  console.log("Expected:", expectedHeaders)
-  console.log("Result:", headers)
-  process.exit(1)
-}
-
-console.log("BROWSER PASSED")
-process.exit(0)
+assert.equal(expectedSignature, signature)
+assert.deepStrictEqual(expectedHeaders, headers)
