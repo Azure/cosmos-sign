@@ -10,7 +10,7 @@ Utility library for signing Azure Cosmos tokens and generating headers. Works in
 
 ## Generate a signed header value using your master key
 
-```
+``` js
 import { generateSignature } from "cosmos-sign"
 
 const masterKey = "< your master key here >";
@@ -23,7 +23,7 @@ const result = generateSignature(masterKey, method, resourceType, resourceId);
 
 ## Generate a headers object instead
 
-```
+``` js
 import { generateHeaders } from "cosmos-sign"
 
 const masterKey = "< your master key here >";
@@ -44,7 +44,7 @@ fetch("https://your-db.cosmos.azure.com/", {
 
 ## Optionally pass a date in
 
-```
+``` js
 import { generateSignature } from "cosmos-sign"
 
 const masterKey = "< your master key here >";
