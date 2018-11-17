@@ -33,8 +33,6 @@ const resourceType = ""
 
 const headers = generateHeaders(masterKey, method, resourceType, resourceId)
 
-console.log(headers)
-
 fetch("https://your-db.cosmos.azure.com/", {
   headers
 })
@@ -51,7 +49,7 @@ const resourceId = "";
 const resourceType = "";
 const date = new Date(<tomorrow>)
 
-const result = generateSignature(masterKey, method, resourceType, resourceId, const date = new Date(<tomorrow>));
+const result = generateSignature(masterKey, method, resourceType, resourceId, date);
 ```
 
 ## Notes
