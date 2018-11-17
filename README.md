@@ -4,6 +4,8 @@
 [![CircleCI](https://circleci.com/gh/southpolesteve/cosmos-sign.svg?style=svg)](https://circleci.com/gh/southpolesteve/cosmos-sign)
 ![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/cosmos-sign.svg)
 
+Utility library for signing Azure Cosmos tokens and generating headers. Works in both node and the browser
+
 `npm install cosmos-sign`
 
 ## Generate a signed header value using your master key
