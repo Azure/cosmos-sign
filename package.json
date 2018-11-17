@@ -11,7 +11,7 @@
     "test": "node lib/browser.test.js && node lib/node.test.js",
     "format": "prettier --write \"src/**/*.ts\"",
     "check-format": "prettier --list-different \"src/**/*.ts\"",
-    "prepack": "npm install && npm compile"
+    "prepack": "npm install && npm run compile"
   },
   "keywords": [
     "Azure",
