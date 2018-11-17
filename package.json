@@ -1,6 +1,6 @@
 {
   "name": "cosmos-sign",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Utility for signing Azure Cosmos keys",
   "browser": "./lib/browser.js",
   "main": "./lib/node.js",
