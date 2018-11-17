@@ -1,0 +1,21 @@
+{
+  "name": "cosmos-sign",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "rimraf lib && tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "10.12.9",
+    "rimraf": "2.6.2"
+  },
+  "dependencies": {
+    "typescript": "3.1.6"
+  }
+}
