@@ -1,5 +1,5 @@
 import { createHmac } from "crypto";
-import { buildSign } from "./buildSign";
+import { Signer } from "./buildSign";
 
 const hmac = (key: string, message: string) => {
   return createHmac("sha256", Buffer.from(key, "base64"))
@@ -7,4 +7,8 @@ const hmac = (key: string, message: string) => {
     .digest("base64");
 };
 
-export const sign = buildSign(hmac);
+const signer = Signer(hmac);
+
+export const generateSignature = signer.signature;
+
+export const generateheaders = signer.headers;

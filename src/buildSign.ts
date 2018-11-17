@@ -19,8 +19,8 @@ type ResourceType =
 
 type Method = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
 
-export function buildSign(hmac: (key: string, message: string) => string) {
-  return function(
+export function Signer(hmac: (key: string, message: string) => string) {
+  function signature(
     masterKey: string,
     method: Method,
     resourceType: ResourceType = "",
@@ -44,5 +44,31 @@ export function buildSign(hmac: (key: string, message: string) => string) {
     return encodeURIComponent(
       "type=" + type + "&ver=" + version + "&sig=" + signature
     );
+  }
+
+  function headers(
+    masterKey: string,
+    method: Method,
+    resourceType: ResourceType = "",
+    resourceId: string = "",
+    date: Date = new Date()
+  ) {
+    const sig = signature.call(
+      masterKey,
+      method,
+      resourceType,
+      resourceId,
+      date
+    );
+
+    return {
+      Authorization: sig,
+      "x-ms-date": date.toUTCString()
+    };
+  }
+
+  return {
+    headers,
+    signature
   };
 }
