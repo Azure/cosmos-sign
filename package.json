@@ -13,7 +13,10 @@
     "check-format": "prettier --list-different \"src/**/*.ts\"",
     "prepack": "npm install && npm compile"
   },
-  "keywords": [ "Azure", "Cosmos"],
+  "keywords": [
+    "Azure",
+    "Cosmos"
+  ],
   "author": "Steve Faulkner <southpolesteve@gmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -23,7 +26,8 @@
     "prettier": "1.15.2",
     "rimraf": "2.6.2",
     "typescript": "3.1.6",
-    "webpack": "4.25.1"
+    "webpack": "4.25.1",
+    "webpack-cli": "3.1.2"
   },
   "dependencies": {
     "crypto-js": "3.1.9-1"
