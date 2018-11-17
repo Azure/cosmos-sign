@@ -17,6 +17,11 @@
     "Azure",
     "Cosmos"
   ],
+  "files": [
+    "lib/*"
+  ],
+  "repository": "southpolesteve/cosmos-sign",
+  "bugs": "https://github.com/southpolesteve/cosmos-sign",
   "author": "Steve Faulkner <southpolesteve@gmail.com>",
   "license": "MIT",
   "devDependencies": {
