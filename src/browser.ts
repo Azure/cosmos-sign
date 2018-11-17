@@ -1,4 +1,4 @@
-import { Signer } from "./buildSign"
+import { Signer } from "./signer"
 import sha256 from "crypto-js/hmac-sha256"
 import Base64 from "crypto-js/enc-base64"
 
