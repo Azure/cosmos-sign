@@ -1,5 +1,5 @@
-const type = "master";
-const version = "1.0";
+const type = "master"
+const version = "1.0"
 
 type ResourceType =
   | "dbs"
@@ -15,9 +15,9 @@ type ResourceType =
   | "conflicts"
   | "pkranges"
   | "offers"
-  | "";
+  | ""
 
-type Method = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
+type Method = "GET" | "POST" | "PUT" | "PATCH" | "DELETE"
 
 export function Signer(hmac: (key: string, message: string) => string) {
   function signature(
@@ -37,13 +37,13 @@ export function Signer(hmac: (key: string, message: string) => string) {
       date.toUTCString().toLowerCase() +
       "\n" +
       "" +
-      "\n";
+      "\n"
 
-    var signature = hmac(masterKey, text);
+    var signature = hmac(masterKey, text)
 
     return encodeURIComponent(
       "type=" + type + "&ver=" + version + "&sig=" + signature
-    );
+    )
   }
 
   function headers(
@@ -59,16 +59,16 @@ export function Signer(hmac: (key: string, message: string) => string) {
       resourceType,
       resourceId,
       date
-    );
+    )
 
     return {
       Authorization: sig,
       "x-ms-date": date.toUTCString()
-    };
+    }
   }
 
   return {
     headers,
     signature
-  };
+  }
 }

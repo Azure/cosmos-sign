@@ -37,5 +37,8 @@
       "path": "./bundle.js",
       "maxSize": "3.2 kB"
     }
-  ]
+  ],
+  "prettier": {
+    "semi": false
+  }
 }
