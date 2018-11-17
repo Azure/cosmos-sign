@@ -14,7 +14,7 @@ const expectedSignature = encodeURIComponent(
 const expectedHeaders = {
   Authorization: expectedSignature,
   "x-ms-date": date.toUTCString()
-}
+};
 
 const signature = generateSignature(
   masterKey,
