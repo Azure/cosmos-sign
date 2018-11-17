@@ -11,4 +11,4 @@ const signer = Signer(hmac)
 
 export const generateSignature = signer.signature
 
-export const generateheaders = signer.headers
+export const generateHeaders = signer.headers

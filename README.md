@@ -10,41 +10,39 @@ Utility library for signing Azure Cosmos tokens and generating headers. Works in
 
 ## Generate a signed header value using your master key
 
-``` js
+```js
 import { generateSignature } from "cosmos-sign"
 
-const masterKey = "< your master key here >";
-const method = "GET";
-const resourceId = "";
-const resourceType = "";
+const masterKey = "< your master key here >"
+const method = "GET"
+const resourceId = ""
+const resourceType = ""
 
-const result = generateSignature(masterKey, method, resourceType, resourceId);
+const result = generateSignature(masterKey, method, resourceType, resourceId)
 ```
 
 ## Generate a headers object instead
 
-``` js
+```js
 import { generateHeaders } from "cosmos-sign"
 
-const masterKey = "< your master key here >";
-const method = "GET";
-const resourceId = "";
-const resourceType = "";
+const masterKey = "< your master key here >"
+const method = "GET"
+const resourceId = ""
+const resourceType = ""
 
-const headers = generateHeaders(masterKey, method, resourceType, resourceId);
+const headers = generateHeaders(masterKey, method, resourceType, resourceId)
 
 console.log(headers)
-
 
 fetch("https://your-db.cosmos.azure.com/", {
   headers
 })
-
 ```
 
 ## Optionally pass a date in
 
-``` js
+```js
 import { generateSignature } from "cosmos-sign"
 
 const masterKey = "< your master key here >";

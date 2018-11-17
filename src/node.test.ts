@@ -1,5 +1,5 @@
 import assert from "assert"
-import { generateSignature, generateheaders } from "./node"
+import { generateSignature, generateHeaders } from "./node"
 
 const date = new Date("Sat, 17 Nov 2018 01:06:05 GMT")
 const masterKey =
@@ -25,7 +25,7 @@ const signature = generateSignature(
   date
 )
 
-const headers = generateheaders(
+const headers = generateHeaders(
   masterKey,
   method,
   resourceType,
