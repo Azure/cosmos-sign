@@ -1,5 +1,5 @@
 {
-  "name": "cosmos-sign",
+  "name": "@azure/cosmos-sign",
   "version": "1.0.2",
   "description": "Utility for signing Azure Cosmos keys",
   "browser": "./lib/browser.js",
@@ -20,9 +20,9 @@
   "files": [
     "lib/*"
   ],
-  "repository": "southpolesteve/cosmos-sign",
-  "bugs": "https://github.com/southpolesteve/cosmos-sign",
-  "author": "Steve Faulkner <southpolesteve@gmail.com>",
+  "repository": "Azure/cosmos-sign",
+  "bugs": "https://github.com/Azure/cosmos-sign",
+  "author": "Microsoft Corporation",
   "license": "MIT",
   "devDependencies": {
     "@types/crypto-js": "3.1.43",
