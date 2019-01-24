@@ -12,6 +12,10 @@ const expectedSignature = encodeURIComponent(
   "type=master&ver=1.0&sig=dFkNJGBUXu+ggUJnH1qh+7S1K7BcFdYYtxggMonBH8I="
 )
 
+const expectedOfferSignature = encodeURIComponent(
+  "type=master&ver=1.0&sig=bziS8AttbML5q2P+A1nZfrGJfARdVM0G678XPMURYEY="
+)
+
 const expectedHeaders = {
   Authorization: expectedSignature,
   "x-ms-date": date.toUTCString()
@@ -33,5 +37,14 @@ const headers = generateHeaders(
   date
 )
 
+const offerSignature = generateSignature(
+  masterKey,
+  method,
+  "offers",
+  "FooBar",
+  date
+)
+
 assert.deepStrictEqual(expectedSignature, signature)
+assert.deepStrictEqual(expectedOfferSignature, offerSignature)
 assert.deepStrictEqual(expectedHeaders, headers)
