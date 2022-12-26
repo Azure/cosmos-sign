@@ -40,7 +40,7 @@
   "bundlesize": [
     {
       "path": "./bundle.js",
-      "maxSize": "3.2 kB"
+      "maxSize": "3.3 kB"
     }
   ],
   "prettier": {

@@ -27,6 +27,10 @@ export function Signer(hmac: (key: string, message: string) => string) {
     resourceId: string = "",
     date: Date = new Date()
   ) {
+    // Offer must always be lowercased: See https://docs.microsoft.com/en-us/rest/api/cosmos-db/get-an-offer
+    if (resourceType === "offers") {
+      resourceId = resourceId.toLowerCase()
+    }
     var text =
       method.toLowerCase() +
       "\n" +
